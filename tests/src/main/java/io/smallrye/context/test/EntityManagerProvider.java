@@ -27,7 +27,6 @@ public class EntityManagerProvider {
     }
 
     public void close(@Disposes EntityManager em) {
-        System.err.println("Disposing EM");
-        em.close();
+        throw new RuntimeException("No panic. I'm just testing that dispose gets called");
     }
 }
